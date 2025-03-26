@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiago Viana</title>
+    <title>Tiago Vaz</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -36,6 +36,21 @@
     <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body class="bg-slate-100 dark:bg-slate-900 leading-relaxed text-slate-600 dark:text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
+    <!-- Theme and Language Controls -->
+    <div class="fixed top-0 left-0 z-50 p-4 flex gap-4">
+        <button id="theme-toggle" class="p-2 bg-slate-200 dark:bg-slate-800 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200">
+            <svg id="theme-toggle-dark" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+            </svg>
+            <svg id="theme-toggle-light" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+        </button>
+        <button id="lang-toggle" class="p-2 bg-slate-200 dark:bg-slate-800 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200">
+            <span class="font-medium text-sm">PT</span>
+        </button>
+    </div>
+
     <div class="group/spotlight relative">
         <div class="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute dark:bg-[radial-gradient(600px_circle_at_0px_0px,rgba(29,78,216,0.15),transparent_80%)]"></div>
         <div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
@@ -43,28 +58,29 @@
                 <!-- Header / Navegação Lateral -->
                 <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
                     <div>
-                        <div class="flex justify-between items-center mb-8">
-                            <img src="assets/images/avatar.jpg" alt="Profile photo" class="h-48 w-48 rounded-full object-cover">
-                            <div class="flex gap-4">
-                                <button id="theme-toggle" class="p-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200">
-                                    <svg id="theme-toggle-dark" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
-                                    </svg>
-                                    <svg id="theme-toggle-light" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
-                                    </svg>
-                                </button>
-                                <button id="lang-toggle" class="p-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200">
-                                    <span class="font-medium text-sm">PT</span>
-                                </button>
-                            </div>
-                        </div>
+                        <img src="assets/images/avatar.jpg" alt="Profile photo" class="h-48 w-48 rounded-full object-cover mb-8">
                         <h1 class="text-4xl font-bold tracking-tight text-slate-800 dark:text-slate-200 sm:text-5xl">
-                            <a href="/">Tiago Viana</a>
+                            <a href="/">Tiago Vaz</a>
                         </h1>
                         <h2 class="mt-3 text-lg font-medium tracking-tight text-slate-800 dark:text-slate-200 sm:text-xl">
                             Software Engineer
                         </h2>
+                        <nav class="nav hidden lg:block" aria-label="Main navigation">
+                            <ul class="mt-16 w-max">
+                                <li>
+                                    <a class="group flex items-center py-3" href="#about">
+                                        <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200"></span>
+                                        <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200" data-en="About" data-pt="Sobre">About</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="group flex items-center py-3" href="#blog">
+                                        <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200"></span>
+                                        <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200" data-en="Blog" data-pt="Blog">Blog</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                     <ul class="ml-1 mt-8 flex items-center" aria-label="Social links">
                         <li class="mr-5 text-xs">
@@ -87,17 +103,19 @@
                 <!-- Main Content -->
                 <main class="pt-24 lg:w-1/2 lg:py-24">
                     <!-- Bio Section -->
-                    <div id="profile-content" class="markdown mb-16">
-                        <!-- Profile content will be loaded here -->
-                    </div>
+                    <section id="about" class="mb-16">
+                        <div id="profile-content" class="markdown">
+                            <!-- Profile content will be loaded here -->
+                        </div>
+                    </section>
 
                     <!-- Blog Posts Section -->
-                    <div class="border-t border-slate-200 dark:border-slate-800 pt-8">
-                        <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-200 mb-8">Latest Posts</h2>
+                    <section id="blog" class="border-t border-slate-200 dark:border-slate-800 pt-8">
+                        <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-200 mb-8" data-en="Latest Posts" data-pt="Últimos Posts">Latest Posts</h2>
                         <div id="posts" class="grid gap-8">
                             <!-- Post thumbnails will be loaded here -->
                         </div>
-                    </div>
+                    </section>
                 </main>
             </div>
         </div>

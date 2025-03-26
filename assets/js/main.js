@@ -30,6 +30,16 @@ const getPreferredLanguage = () => {
     return 'en'; // Default to English
 };
 
+const updatePageLanguage = (lang) => {
+    // Update HTML lang attribute
+    document.documentElement.lang = lang;
+    
+    // Update all translatable elements
+    document.querySelectorAll('[data-en][data-pt]').forEach(element => {
+        element.textContent = element.getAttribute(`data-${lang}`);
+    });
+};
+
 const toggleLanguage = () => {
     const currentLang = localStorage.getItem('language') || 'en';
     const newLang = currentLang === 'en' ? 'pt' : 'en';
@@ -37,6 +47,7 @@ const toggleLanguage = () => {
     document.getElementById('lang-toggle').querySelector('span').textContent = 
         newLang === 'en' ? 'PT' : 'EN';
     updateContent(newLang);
+    updatePageLanguage(newLang);
 };
 
 // Format date based on language
@@ -147,4 +158,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize content and effects
     addSpotlightEffect();
     updateContent(currentLang);
+    updatePageLanguage(currentLang);
 });

@@ -1,3 +1,12 @@
+/* Theme and language controls */
+.fixed button {
+    @apply shadow-lg backdrop-blur-sm bg-opacity-80 dark:bg-opacity-80 transition-all;
+}
+
+.fixed button:hover {
+    @apply shadow-xl transform scale-105;
+}
+
 /* Markdown content styling */
 .markdown {
     @apply text-slate-600 dark:text-slate-400;
@@ -53,6 +62,15 @@
 
 .markdown blockquote {
     @apply border-l-4 border-slate-300 dark:border-slate-700 pl-4 mb-4 italic;
+}
+
+/* Navigation menu */
+.nav-indicator {
+    @apply transition-all duration-300;
+}
+
+.nav-text {
+    @apply transition-all duration-300;
 }
 
 /* Post thumbnail styling */
