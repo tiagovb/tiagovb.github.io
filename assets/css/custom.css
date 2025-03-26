@@ -1,0 +1,69 @@
+/* Custom styles to enhance Pico CSS */
+
+/* Avatar image styles */
+#avatar {
+    border: 4px solid var(--primary);
+    transition: transform 0.3s ease;
+}
+
+#avatar:hover {
+    transform: scale(1.05);
+}
+
+/* Language selector styling */
+#language-select {
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
+    color: var(--secondary-inverse);
+}
+
+/* Profile content spacing */
+#profile-content {
+    margin-top: 2rem;
+}
+
+/* Blog post cards */
+article.post-card {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--secondary);
+    border-radius: var(--border-radius);
+    transition: transform 0.2s ease;
+}
+
+article.post-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Theme toggle button enhancement */
+#theme-toggle {
+    padding: 0.5rem 1rem;
+}
+
+/* Navigation container */
+nav.container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--secondary);
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #avatar {
+        margin: 0 auto;
+    }
+}
