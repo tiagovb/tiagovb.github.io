@@ -1,69 +1,83 @@
-/* Custom styles to enhance Pico CSS */
-
-/* Avatar image styles */
-#avatar {
-    border: 4px solid var(--primary);
-    transition: transform 0.3s ease;
+/* Markdown content styling */
+.markdown {
+    @apply text-slate-400;
 }
 
-#avatar:hover {
-    transform: scale(1.05);
+.markdown h1, .markdown h2, .markdown h3, .markdown h4 {
+    @apply text-slate-200 font-medium leading-snug mt-8 mb-4;
 }
 
-/* Language selector styling */
+.markdown h1 {
+    @apply text-3xl;
+}
+
+.markdown h2 {
+    @apply text-2xl;
+}
+
+.markdown h3 {
+    @apply text-xl;
+}
+
+.markdown p {
+    @apply mb-4 text-base leading-relaxed;
+}
+
+.markdown a {
+    @apply font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300;
+}
+
+.markdown ul {
+    @apply list-disc list-inside mb-4;
+}
+
+.markdown ol {
+    @apply list-decimal list-inside mb-4;
+}
+
+.markdown li {
+    @apply mb-2;
+}
+
+.markdown code {
+    @apply bg-slate-800 px-2 py-1 rounded text-sm font-mono;
+}
+
+.markdown pre {
+    @apply bg-slate-800 p-4 rounded-lg mb-4 overflow-x-auto;
+}
+
+.markdown pre code {
+    @apply bg-transparent p-0;
+}
+
+.markdown blockquote {
+    @apply border-l-4 border-slate-700 pl-4 mb-4 italic;
+}
+
+/* Post card styling */
+.post-card {
+    @apply mb-8 p-6 bg-slate-800/50 rounded-lg hover:bg-slate-800/75 transition-colors;
+}
+
+.post-card h3 {
+    @apply text-slate-200 text-xl font-medium mb-2;
+}
+
+.post-card .post-meta {
+    @apply text-sm text-slate-500 mb-2;
+}
+
+.post-card .post-excerpt {
+    @apply text-slate-400;
+}
+
+/* Language selector */
 #language-select {
-    padding: 0.5rem;
-    border-radius: var(--border-radius);
-    background-color: var(--secondary);
-    border: 1px solid var(--secondary);
-    color: var(--secondary-inverse);
+    @apply bg-slate-800 text-slate-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-300;
 }
 
-/* Profile content spacing */
-#profile-content {
-    margin-top: 2rem;
-}
-
-/* Blog post cards */
-article.post-card {
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    border: 1px solid var(--secondary);
-    border-radius: var(--border-radius);
-    transition: transform 0.2s ease;
-}
-
-article.post-card:hover {
-    transform: translateY(-3px);
-}
-
-/* Theme toggle button enhancement */
-#theme-toggle {
-    padding: 0.5rem 1rem;
-}
-
-/* Navigation container */
-nav.container {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-/* Footer styling */
-footer {
-    margin-top: 4rem;
-    padding: 2rem 0;
-    text-align: center;
-    border-top: 1px solid var(--secondary);
-}
-
-/* Responsive grid adjustments */
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    #avatar {
-        margin: 0 auto;
-    }
+/* Profile image animation */
+#avatar {
+    @apply transition-transform duration-300 ease-in-out hover:scale-105;
 }
