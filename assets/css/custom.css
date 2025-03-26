@@ -3,20 +3,20 @@
     @apply text-slate-600 dark:text-slate-400;
 }
 
-.markdown h1, .markdown h2, .markdown h3, .markdown h4 {
-    @apply text-slate-800 dark:text-slate-200 font-medium leading-snug mt-8 mb-4;
-}
-
 .markdown h1 {
-    @apply text-3xl;
+    @apply text-4xl sm:text-5xl font-bold text-slate-800 dark:text-slate-200 leading-tight mt-8 mb-6;
 }
 
 .markdown h2 {
-    @apply text-2xl;
+    @apply text-2xl font-bold text-slate-800 dark:text-slate-200 leading-snug mt-8 mb-4;
 }
 
 .markdown h3 {
-    @apply text-xl;
+    @apply text-xl font-semibold text-slate-800 dark:text-slate-200 leading-snug mt-6 mb-4;
+}
+
+.markdown h4 {
+    @apply text-lg font-semibold text-slate-800 dark:text-slate-200 leading-snug mt-6 mb-4;
 }
 
 .markdown p {
@@ -53,6 +53,23 @@
 
 .markdown blockquote {
     @apply border-l-4 border-slate-300 dark:border-slate-700 pl-4 mb-4 italic;
+}
+
+/* Post thumbnail styling */
+.post-thumbnail {
+    @apply relative rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-800 p-6 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors;
+}
+
+.post-thumbnail h3 {
+    @apply text-xl font-semibold text-slate-800 dark:text-slate-200 mb-2;
+}
+
+.post-thumbnail .post-date {
+    @apply text-sm text-slate-600 dark:text-slate-400 mb-3;
+}
+
+.post-thumbnail .post-excerpt {
+    @apply text-sm text-slate-600 dark:text-slate-400 line-clamp-3;
 }
 
 /* Profile image hover effect */
